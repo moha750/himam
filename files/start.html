@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقدمة عن المنصة</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html, body {
+            background-image: url('../images/else_background.jpg');
+            height: 100%;
+            margin: 0;
+            font-family: 'Cairo', sans-serif;
+            direction: rtl;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px; 
+            background-color: rgb(25, 117, 106);
+            color: rgb(255, 255, 255);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; 
+        }
+
+        nav {
+            text-align: center;
+            gap: 15px;
+        }
+
+        nav a {
+            font-size: 17px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 6px 10px; 
+        }
+
+        nav a:hover {
+            color: rgb(25, 117, 106);
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+        }
+
+        .dropdown {
+            display: none; 
+            position: relative;
+        }
+
+        .dropbtn {
+            font-size: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            min-width: 160px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: right;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: rgb(25, 117, 106);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(25, 117, 106);
+            color: white;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 0px;
+        }
+
+        .text {
+            font-size: 18px;
+            margin-top: 60px;
+            color: rgb(25, 117, 106);
+            text-align: right;
+            padding: 20px;
+            width: 100%;
+            max-width: 400px; /* Maximum width for larger screens */
+        }
+
+        footer {
+            background-color: rgb(25, 117, 106);
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding: 10px 0;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; 
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 0 20px;
+        }
+
+        .contact-item p {
+            margin-left: 5px;
+            color: #ffffff;
+        }
+
+        form {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            width: 85%; /* Full width for form */
+            max-width: 400px; /* Maximum width */
+        }
+
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+            color: rgb(25, 117, 106);
+        }
+
+        input, select, textarea {
+            margin-top: 5px;
+            padding: 10px;
+            border: 1px solid rgb(25, 117, 106);
+            border-radius: 5px;
+            font-size: 16px;
+            width: 90%; /* Full width for inputs */
+        }
+
+        h2 {
+            margin-top: 20px;
+            color: rgb(25, 117, 106);
+        }
+
+        button {
+            background-color: rgb(25, 117, 106);
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background-color: rgb(255, 255, 255);
+            color: rgb(25, 117, 106);
+        }
+
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                display: none; 
+            }
+            .dropdown {
+                display: block; 
+            }
+
+            .text {
+                margin-top: 30px; 
+                padding: 10px; 
+                max-width: 90%; /* Adjusted maximum width for smaller devices */
+            }
+
+            form {
+                padding: 20px; /* Reduced padding for smaller screens */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .dropdown {
+                display: none; 
+            }
+
+            .contact-info {
+                flex-direction: row; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="dropdown">
+            <button class="dropbtn" style="margin-right: 10px;"><i class="color: #ffffff; fa-solid fa-list"></i></button>
+            <div class="dropdown-content">
+                <a href="../index.html">الصفحة الرئيسية</a>
+                <a href="./home.html">نبذة عنا</a>
+                <a href="./steps.html">الدليل الإرشادي</a>
+                <a href="./start.html">إبدأ الخدمة</a>
+                <a href="./company.html">الشركات</a>
+                <a href="#contact">تواصل معنا</a>
+            </div>
+        </div>
+        <nav>
+            <a href="../index.html">
+                <i class="fa-solid fa-house" style=" font-size: 20px; margin: 0 10px;"></i>
+            </a>
+            <a href="./home.html">نبذة عنا</a>
+            <a href="./steps.html">الدليل الإرشادي</a>
+            <a href="./start.html">إبدأ الخدمة</a>
+            <a href="./company.html">الشركات</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+        <img src="../images/KFU_logo.png" alt="Logo" width="90" class="logo">
+    </header>
+
+    <main>
+        <section id="about">
+            <div class="text">
+                <form id="registration-form" action="submit.php" method="POST">
+                    <h1>المعلومات الشخصية</h1>
+                    <label for="full-name">الاسم الرباعي:</label>
+                    <input type="text" id="full-name" name="full-name" required>
+
+                    <label for="birth-year">سنة الميلاد:</label>
+                    <input type="number" id="birth-year" name="birth-year" required>
+
+                    <label for="gender">الجنس:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="male">ذكر</option>
+                        <option value="female">أنثى</option>
+                    </select>
+
+                    <label for="nationality">الجنسية:</label>
+                    <input type="text" id="nationality" name="nationality" required>
+
+                    <label for="id-number">رقم الهوية:</label>
+                    <input type="text" id="id-number" name="id-number" required>
+
+                    <label for="phone">رقم الجوال:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="email">الايميل:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="specialization">التخصص:</label>
+                    <input type="text" id="specialization" name="specialization" required>
+
+                    <label for="graduation-year">سنة التخرج:</label>
+                    <input type="number" id="graduation-year" name="graduation-year" required>
+
+                    <label for="university">الجامعة:</label>
+                    <input type="text" id="university" name="university" required>
+
+                    <h2>المعلومات الصحية</h2>
+                    <label for="disability-type">نوع الإعاقة:</label>
+                    <input type="text" id="disability-type" name="disability-type" required>
+
+                    <label for="registered">هل تم التسجيل في خدمة تقييم الإعاقة على منصة هدف الحكومية؟</label>
+                    <select id="registered" name="registered" required>
+                        <option value="yes">نعم</option>
+                        <option value="no">لا</option>
+                    </select>
+
+                    <label for="notes">ملاحظات أخرى:</label>
+                    <textarea id="notes" name="notes" rows="4"></textarea>
+
+                    <button type="submit">إرسال</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact">
+        <h3>تواصل مـعنا</h3>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fa-brands fa-square-x-twitter" style="color: #ffffff; font-size: 18px; margin-left: 10px;"></i>
+                <p style="margin-left: 20px;">KFUHAND@</p>
+                <p>Businessckfu@</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-regular fa-envelope" style="color: #ffffff; font-size: 18px; margin-left: 10px;"></i>
+                <p>mazayed@kfu.edu.sa</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-whatsapp" style="color: #ffffff; font-size: 18px; margin-left: 10px;"></i>
+                <p style="margin-left: 20px;">966580673992+</p>
+                <p>966567622095+</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مقدمة عن المنصة</title>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        html, body {
+            background-image: url('../images/else_background.jpg'); /* تعيين الصورة كخلفية */
+            height: 100%; /* تأكد من أن html و body يغطيان كامل الشاشة */
+            margin: 0; /* إزالة التباعد الافتراضي */
+            font-family: 'Cairo', sans-serif; /* تطبيق خط "Cairo" */
+            direction: rtl; /* الكتابة من اليمين إلى اليسار */
+            display: flex;
+            flex-direction: column; /* جعل العناصر في عمود */
+        }
+
+        header {
+            text-align: center;
+            display: flex;
+            justify-content:space-between;
+            align-items: center;
+            padding: 10px 20px; /* Increased padding for better fit */
+            background-color: rgb(25, 117, 106);
+            color: rgb(255, 255, 255);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            flex-wrap: wrap; /* Allow wrapping for smaller screens */
+        }
+
+        nav {
+            text-align: center;
+            gap: 15px;
+        }
+
+        nav a {
+            font-size: 17px;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            padding: 6px 10px; /* Adjusted padding for better spacing */
+        }
+
+        nav a:hover {
+            color: rgb(25, 117, 106);
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+        }
+
+        .dropdown {
+            display: none; /* Hide dropdown by default */
+            position: relative;
+        }
+        .dropbtn {
+            font-size: 20px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(255, 255, 255);
+            min-width: 160px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            text-align: right;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: rgb(25, 117, 106);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: rgb(25, 117, 106);
+            color: white;
+        }
+
+        main {
+            flex: 1; /* يسمح للمحتوى بالتمدد لملء المساحة المتاحة */
+            display: flex;
+            justify-content: center; /* مركز المحتوى */
+            align-items: center; /* توسيط المحتوى عمودياً */
+            margin-top: 0px; /* مسافة من الأعلى */
+        }
+
+        .text {
+            font-size: 18px;
+            color: rgb(25, 117, 106);
+            text-align: center; /* محاذاة النص إلى المنتصف */
+            padding: 20px; /* إضافة padding للمساحة */
+        }
+        a{
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: rgb(25, 117, 106);
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding: 15px 20px; /* Adjusted padding for better fit */
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+            flex-wrap: wrap; /* Allow items to wrap */
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin: 0 20px; /* Adjusted margin for better spacing */
+        }
+
+        .contact-item p {
+            margin-left: 5px;
+            color: #ffffff; /* تغيير لون النص للجهات الاتصال */
+        }
+        
+        /* Media Queries for responsiveness */
+        @media (max-width: 768px) {
+            nav {
+                display: none; /* Hide original nav links on small screens */
+            }
+
+            .dropdown {
+                display: block; /* Show dropdown on small screens */
+            }
+        }
+
+        @media (min-width: 769px) {
+            .dropdown {
+                display: none; /* Hide dropdown on larger screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="dropdown">
+                <button class="dropbtn" style="margin-right: 10px;"><i class="color: #ffffff; fa-solid fa-list"></i></button>
+            <div class="dropdown-content">
+                <a href="../index.html">الصفحة الرئيسية</a>
+                <a href="./home.html">نبذة عنا</a>
+                <a href="./steps.html">الدليل الإرشادي</a>
+                <a href="./start.html">إبدأ الخدمة</a>
+                <a href="./company.html">الشركات</a>
+                <a href="#contact">تواصل معنا</a>
+            </div>
+        </div>
+        <nav>
+            <a href="../index.html">
+                <i class="fa-solid fa-house" style=" font-size: 20px; margin: 0 10px;"></i>
+            </a>
+            <a href="./home.html">نبذة عنا</a>
+            <a href="./steps.html">الدليل الإرشادي</a>
+            <a href="./start.html">إبدأ الخدمة</a>
+            <a href="./company.html">الشركات</a>
+            <a href="#contact">تواصل معنا</a>
+        </nav>
+        <img src="../images/KFU_logo.png" alt="Logo" width="90" class="logo">
+    </header>
+
+    <main>
+        <section>
+            <div class="text" style="margin-top: 60px;">
+                <h1>إكسبو هِـمم</h1>
+                <h4>هي مبادرة طموحة تعمل على تحقيق الشمولية في سوق العمل لذوي الإعاقة حيث تعتمد على جمع بيانات المستفيد بما في ذلك التخصص الأكاديمي، نوع الإعاقة، والاحتياجات الخاصة، لتوفير تجربة شخصية تلبي احتياجاتهم. كما تسعى لربطهم بالشركات التي تقدم بيئات عمل داعمة.</h4>
+                <h1 style="padding-top: 40px;">الشركاء</h1>
+                <div>
+                    <a href="https://x.com/businessckfu?s=21" target="_blank">
+                        <img src="../images/bus_clube.png" alt="bus_clube" width="80" style="margin-left: 60px; padding-bottom: 30px; margin-right: 60px;">
+                    </a>
+                    <a href="https://x.com/kfuhand?s=21" target="_blank">
+                        <img src="../images/المعرض.png" alt="المعرض" width="200" style="padding-bottom: 30px;">
+                    </a>
+                </div>
+                <div style="padding-bottom: 50px;">
+                    <a href="https://www.kfu.edu.sa/ar/Deans/AhsaaStudent/Pages/%D9%88%D8%AD%D8%AF%D8%A9-%D8%B0%D9%88%D9%8A-%D8%A7%D9%84%D8%A5%D8%B9%D8%A7%D9%82%D8%A9-.aspx" target="_blank" style="text-decoration: non;">
+                        <img src="../images/gover.png" alt="gover" width="130" style="margin-left: 70px;">
+                    </a>
+                    <a href="https://x.com/kfuniversity?s=21" target="_blank" style="text-decoration: non;">
+                        <img src="../images/KFU_logo.png" alt="KFU_logo" width="120" >
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contact"> <!-- Footer Section -->
+        <h3>تواصل مـعنا</h3>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fa-brands fa-square-x-twitter" style="color: #ffffff;font-size: 18px; margin-left: 10px;"></i>
+                <p style="margin-left: 20px;">KFUHAND@</p>
+                <p>Businessckfu@</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-regular fa-envelope" style="color: #ffffff; font-size: 18px; margin-left: 10px;"></i>
+                <p>mazayed@kfu.edu.sa</p>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-whatsapp" style="color: #ffffff; font-size: 18px; margin-left: 10px;"></i>
+                <p style="margin-left: 20px;">966580673992+</p>
+                <p>966567622095+</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
